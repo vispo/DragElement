@@ -4,8 +4,6 @@
     You are free to use this code as you please. However, if you find
     any bugs in it, please fix them, let me know, and make the fix
     available. 
-
-    var d = new DragE
 */
 function DragElement(aElement, aCage) {
     /*  * Constructs an object that makes aElement draggable. 
