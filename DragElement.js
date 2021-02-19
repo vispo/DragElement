@@ -6,7 +6,7 @@
     available. 
 */
 function DragElement(aElement, aCage) {
-    /*  * Constructs an object that makes aElement draggable. 
+    /*  * Constructs an object that makes aElement draggable (mouse or touch). 
         * aElement is the element (or its id) that becomes draggable. 
         * aCage is is an optional element (or its id) that aElement stays within. 
         * aCage does not have to be the parent of aElement.

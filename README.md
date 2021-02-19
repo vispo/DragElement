@@ -8,11 +8,12 @@ DragElement by Jim Andrews, 2/18/2021
 
 	DragElement(aElement, aCage) 
 
-        * Constructs an object that makes aElement draggable. 
+        * Constructs an object that makes aElement draggable (mouse or touch). 
         * aElement is the element (or its id) that becomes draggable. 
         * aCage is is an optional element (or its id) that aElement stays within. 
         * aCage does not have to be the parent of aElement.
         * The CSS position property of aElement cannot be static (the default value).
 	    * See the included HTML file for usage.
+        * Tested on iOS, Android, Windows, and Mac browsers.
     
  
