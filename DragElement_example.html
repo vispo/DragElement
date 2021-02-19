@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragElement example use</title>
+    <style>
+        body {
+            overscroll-behavior-y: none;
+            position: fixed;
+            overflow: hidden;
+            /* The above prevents iOS overscroll in iOS browser. */
+            margin:0px;
+        }
+        #a {
+            /* The important thing is the position property is not static (default)  */
+            position:absolute;
+            cursor: pointer;
+            left: 200px;
+            top: 30px;
+            background-color: brown;
+        }
+        #b {
+            /* The important thing is the position property is not static (default)  */
+            position:absolute;
+            left:170px;
+            top:170px;
+            width:100px;
+            height:40px;
+            background-color: cornflowerblue;
+        }
+        #i {
+            /* The important thing is the position property is not static (default)  */
+            position:absolute;
+            left:100px;
+            top:220px;
+            background-color: red;
+        }
+        #j {
+            /* The important thing is the position property is not static (default)  */
+            position:absolute;
+            left:30px;
+            top:3px;
+            background-color: red;
+        }
+        #cage {
+            position:absolute;
+            left:50px;
+            top:110px;
+            width:250px;
+            height:400px;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="cage">Bounding cage</div>
+    <div id="b">Stays in cage</div>
+    <div id="a">Freely draggable</div>
+    <img  id="i" src="image0.jpg" title="Stays in cage">
+    <img  id="j" src="image1.jpg" title="Freely draggable">
+
+   <script src="DragElement.js"></script>
+   <script>
+       var a = document.getElementById("a");
+       a.drag = new DragElement(a);
+
+       var b = new DragElement("b", "cage");
+
+       var i = document.getElementById("i");
+       i.drag = new DragElement(i, "cage");
+
+       var j = new DragElement("j");
+   </script> 
+</body>
+</html>
